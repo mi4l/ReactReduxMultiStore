@@ -6,29 +6,31 @@ import { connectWithContext } from '../utils';
 const context = React.createContext();
 const connect = connectWithContext(context);
 
-const Button = ({ increment }) => (<button onClick={increment}>Increment</button>);
+const Button = ({ increment }) => (
+  <button onClick={increment}>Increment</button>
+);
 
 const mapDispatchToProps = {
-    increment
+  increment
 };
 
 const ConnectedButton = connect(null, mapDispatchToProps)(Button);
 
 const External = props => (
-    <React.Fragment>
-        <h3>External Application count: {props.count}</h3>
-        <ConnectedButton />
-    </React.Fragment>
+  <React.Fragment>
+    <h3>External Application count: {props.count}</h3>
+    <ConnectedButton />
+  </React.Fragment>
 );
 
 const mapStateToProps = state => ({
-    count: state.count
+  count: state.count
 });
 
 const ConnectedExternal = connect(mapStateToProps, null)(External);
 
 export const ExternalApp = () => (
-    <Provider store={configureStore()} context={context}>
-        <ConnectedExternal />
-    </Provider>
+  <Provider store={configureStore()} context={context}>
+    <ConnectedExternal />
+  </Provider>
 );

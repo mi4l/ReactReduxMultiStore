@@ -4,8 +4,6 @@ import { PrimaryApp } from './PrimaryApplication';
 import { ExternalApp } from './ExternalApplication';
 
 ReactDOM.render(
-    <PrimaryApp
-        ExternalApp={ExternalApp}
-    />,
-    document.getElementById('Root')
+  <PrimaryApp ExternalApp={ExternalApp} />,
+  document.getElementById('Root')
 );

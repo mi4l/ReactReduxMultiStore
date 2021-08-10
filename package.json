@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "format:all": "prettier --write .",
     "start": "parcel -p 3000 src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +12,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5"
+    "parcel-bundler": "^1.12.5",
+    "prettier": "^2.3.2"
   },
   "dependencies": {
     "react": "^17.0.2",

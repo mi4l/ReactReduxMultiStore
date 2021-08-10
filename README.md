@@ -1,4 +1,5 @@
 # Multiple, nested stores using React/Redux
+
 Given the unfortunate situation where applications are not quite ready to be completely decoupled but need to be functionally decoupled, using `react-redux@6`+ can help ease the transition.
 
 ```
